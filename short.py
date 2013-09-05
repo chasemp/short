@@ -3,47 +3,6 @@ import os, sys
 from os.path import expanduser
 import subprocess
 
-"""
-Processes Chase alias file synatx for more helpful usage details
-
-Making aliases more useful. '-v' option hides an alias
-unless we are run w/ -v.  This is for aliases that we need to be reminded 
-of less often.  Tags can be used to group aliases.  'tag=fun' allows
-all fun tagged commands only to be shown.  Specifying a tag
-will override -v only. aliases without descriptions are ignored.
-
-In file start aliases to parse with separator: 
-    #alias_definitions:
-
-Now add an alias:
-    #desc [n <file>] nano with word warp, smooth scroll
-    alias n="nano -wES"
-
-Run this script and see help:
-    n              -- [n <file>] nano with word warp, smooth scroll
-
-Make an alias only show up with '-v':
-    n              -- [n <file>] nano with word warp, smooth scroll -v  
-
-Run this script and see:
-    Nothing....need -v
-
-Run this script with '-v':
-    n              -- [n <file>] nano with word warp, smooth scroll -v  
-
-Group aliases by tags:
-    #desc git add tag=git
-    alias ga='git add'
-
-Run this script with argument 'git':
-   Tagged: git
-    ga             -- git add  
-
-Show me defined tags, run with literal 'tag' argument
-    Tagged: tag
-        git
-"""
-
 alias_files = ['.bash_aliases', 
                '.bash_profile']
 
